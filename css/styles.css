@@ -1,1 +1,45 @@
-/* developer styles go here */
+body {
+    font-family: Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif; 
+}
+
+header {
+    max-width: 58rem;
+    margin: 0 auto;
+    background-color: grey;
+}
+
+/* always target the <a> tag for text styling */
+ul.menu {
+    background-color: indigo;
+    color: rgb(100, 216, 84);
+}
+
+ul.menu a {
+    background-color: indigo;
+    color: rgb(201, 206, 206);
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1rem;
+    /* for links, always allow the <a> tag to take up the full li space. Increase the 'clickable/tap' sapce */
+    display: block;    
+}
+
+@media (min-width: 480px) {
+    ul.menu {
+        display: flex;
+        flex-wrap: wrap;        
+    }
+    ul.menu li {
+        /* border: 1px solid white; */
+        /* poporation spacing with 'flex-grow: 1;' */
+        flex-grow: 1; 
+        flex-shrink: 0;
+        /* flex-basis: auto; is be the width of the content inside  */
+        /* flex-basis: 0; is a shorthand for equal space */
+        flex-basis: auto; 
+
+        /* use shorthand for flex (flex-grow, flex-shrink flex-basis) */
+        flex: 1 0 auto;
+        text-align: center;
+    }
+}
