@@ -23,6 +23,25 @@ ul.menu a {
     /* for links, always allow the <a> tag to take up the full li space. Increase the 'clickable/tap' sapce */
     display: block;    
 }
+ul.menu a:hover,
+ul.menu a:active {
+    color: turquoise;
+}
+ul.menu a:hover svg,
+ul.menu a:hover svg path,
+ul.menu a:hover svg rect {
+    fill: turquoise;
+}
+svg {
+    width: 1.25rem;
+    height: 1rem;
+}
+
+svg,
+svg path,
+svg, rect {
+    fill: white;
+}
 
 @media (min-width: 480px) {
     ul.menu {
@@ -40,6 +59,7 @@ ul.menu a {
 
         /* use shorthand for flex (flex-grow, flex-shrink flex-basis) */
         flex: 1 0 auto;
+
         text-align: center;
     }
 }
